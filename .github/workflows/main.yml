@@ -1,0 +1,12 @@
+name: Workflow to trigger pipeline for helm changes to be promoted to k8s
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test First Job
+        run: echo "Job triggered !!"
